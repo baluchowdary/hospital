@@ -29,7 +29,6 @@ public class HospitalService {
 		return hospitalRepo.findAll();
 	}
 
-	@Cacheable(value = "hospitalEntity")
 	public void saveAllHospitalDetails(List<HospitalEntity> entitiesList) {
 		log.info("entitiesList Size::" +entitiesList.size());
 		hospitalRepo.saveAll(entitiesList);
